@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Serralheria Verdun | Serralheria, Churrasqueiras e Soldas</title>
   <meta name="description" content="Serralheria Verdun - orçamento pelo WhatsApp, serralheria em geral, churrasqueiras, portões, grades, estruturas metálicas e muito mais." />
 
@@ -32,6 +33,7 @@
 
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       font-family:"Inter",sans-serif;
       color:var(--text);
@@ -46,8 +48,14 @@
     img{display:block;max-width:100%}
     button,input,textarea,select{font-family:inherit}
 
-    .container{width:min(1180px,calc(100% - 24px));margin:0 auto}
-    .section{padding:82px 0}
+    .container{
+      width:min(1180px,calc(100% - 24px));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:82px 0;
+    }
 
     .tag{
       display:inline-flex;
@@ -126,7 +134,9 @@
       white-space:nowrap;
     }
 
-    .btn:hover{transform:translateY(-2px)}
+    .btn:hover{
+      transform:translateY(-2px);
+    }
 
     .btn::before{
       content:"";
@@ -137,7 +147,9 @@
       transition:.75s ease;
     }
 
-    .btn:hover::before{transform:translateX(130%)}
+    .btn:hover::before{
+      transform:translateX(130%);
+    }
 
     .btn-gold{
       background:linear-gradient(135deg,var(--gold-3),var(--gold),var(--gold-2));
@@ -229,8 +241,17 @@
       font-weight:800;
     }
 
-    .menu-wrap{display:flex;align-items:center;gap:14px}
-    .menu{display:flex;align-items:center;gap:18px}
+    .menu-wrap{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
 
     .menu a{
       font-family:"Oswald",sans-serif;
@@ -242,8 +263,15 @@
       transition:.2s;
     }
 
-    .menu a:hover{color:var(--gold-2)}
-    .header-cta{display:flex;align-items:center;gap:10px}
+    .menu a:hover{
+      color:var(--gold-2);
+    }
+
+    .header-cta{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
 
     .mobile-toggle{
       display:none;
@@ -393,7 +421,9 @@
       margin-top:6px;
     }
 
-    .hero-info b{color:#fff}
+    .hero-info b{
+      color:#fff;
+    }
 
     .hero-card{
       justify-self:end;
@@ -557,7 +587,9 @@
       padding:4px 2px 12px;
     }
 
-    .work-slider::-webkit-scrollbar{display:none}
+    .work-slider::-webkit-scrollbar{
+      display:none;
+    }
 
     .work-card{
       position:relative;
@@ -576,7 +608,9 @@
       transition:transform .45s ease;
     }
 
-    .work-card:hover img{transform:scale(1.05)}
+    .work-card:hover img{
+      transform:scale(1.05);
+    }
 
     .work-card::after{
       content:"";
@@ -745,7 +779,9 @@
       border-bottom:1px solid rgba(255,255,255,.08);
     }
 
-    .review-item:last-child{border-bottom:none}
+    .review-item:last-child{
+      border-bottom:none;
+    }
 
     .review-item h4{
       color:#fff;
@@ -772,7 +808,8 @@
       align-items:stretch;
     }
 
-    .map-card,.form-card{
+    .map-card,
+    .form-card{
       background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04));
       border:1px solid rgba(255,255,255,.08);
       border-radius:26px;
@@ -780,9 +817,13 @@
       box-shadow:var(--shadow);
     }
 
-    .map-info,.form-box{padding:24px}
+    .map-info,
+    .form-box{
+      padding:24px;
+    }
 
-    .map-info h3,.form-box h3{
+    .map-info h3,
+    .form-box h3{
       font-family:"Oswald",sans-serif;
       font-size:34px;
       text-transform:uppercase;
@@ -791,7 +832,8 @@
       color:#fff;
     }
 
-    .map-info p,.form-box p{
+    .map-info p,
+    .form-box p{
       color:var(--muted);
       font-size:14px;
       line-height:1.8;
@@ -811,9 +853,13 @@
       margin-top:18px;
     }
 
-    .full{grid-column:1/-1}
+    .full{
+      grid-column:1/-1;
+    }
 
-    input,select,textarea{
+    input,
+    select,
+    textarea{
       width:100%;
       min-height:52px;
       border-radius:14px;
@@ -831,10 +877,18 @@
       padding:14px 16px;
     }
 
-    input::placeholder, textarea::placeholder{color:#bdbdbd}
-    select{color:#d8d8d8}
+    input::placeholder,
+    textarea::placeholder{
+      color:#bdbdbd;
+    }
 
-    input:focus,select:focus,textarea:focus{
+    select{
+      color:#d8d8d8;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
       border-color:rgba(212,166,70,.45);
       box-shadow:0 0 0 4px rgba(212,166,70,.10);
     }
@@ -860,7 +914,9 @@
       color:#fff;
     }
 
-    .footer-box p,.footer-box li,.footer-box a{
+    .footer-box p,
+    .footer-box li,
+    .footer-box a{
       color:var(--muted);
       font-size:14px;
       line-height:1.8;
@@ -901,7 +957,10 @@
       animation:floatLogo 2.8s ease-in-out infinite;
     }
 
-    .wa-float svg{width:32px;height:32px}
+    .wa-float svg{
+      width:32px;
+      height:32px;
+    }
 
     @keyframes floatLogo{
       0%,100%{transform:translateY(0)}
@@ -929,15 +988,27 @@
         align-items:flex-start;
       }
 
-      .menu.open{display:flex}
+      .menu.open{
+        display:flex;
+      }
+
       .mobile-toggle{
         display:inline-flex;
         align-items:center;
         justify-content:center;
       }
 
-      .header-cta{display:none}
-      .hero-layout,.featured-wrap,.grid-3,.grid-2,.reviews-grid,.contact-grid,.footer-grid{
+      .header-cta{
+        display:none;
+      }
+
+      .hero-layout,
+      .featured-wrap,
+      .grid-3,
+      .grid-2,
+      .reviews-grid,
+      .contact-grid,
+      .footer-grid{
         grid-template-columns:1fr;
       }
 
@@ -950,38 +1021,96 @@
         margin:0 auto;
       }
 
-      .hero-badge{justify-self:center}
-      .hero-actions,.hero-info{justify-content:center}
-      .hero-card{justify-self:center}
-      .work-slider{grid-auto-columns:calc((100% - 14px)/2)}
-      .map-frame{height:320px}
+      .hero-badge{
+        justify-self:center;
+      }
+
+      .hero-actions,
+      .hero-info{
+        justify-content:center;
+      }
+
+      .hero-card{
+        justify-self:center;
+      }
+
+      .work-slider{
+        grid-auto-columns:calc((100% - 14px)/2);
+      }
+
+      .map-frame{
+        height:320px;
+      }
     }
 
     @media(max-width:760px){
-      .section{padding:60px 0}
-      .hero{min-height:auto}
-      .hero-layout{padding:110px 0 82px}
-      .hero-title{font-size:44px}
-      .hero-sub{font-size:18px}
-      .hero-actions .btn{width:100%}
-      .hero-card{display:none}
-      .featured-card video{min-height:240px}
-      .work-slider{grid-auto-columns:84%}
-      .work-card img,.work-card{
+      .section{
+        padding:60px 0;
+      }
+
+      .hero{
+        min-height:auto;
+      }
+
+      .hero-layout{
+        padding:110px 0 82px;
+      }
+
+      .hero-title{
+        font-size:44px;
+      }
+
+      .hero-sub{
+        font-size:18px;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .hero-card{
+        display:none;
+      }
+
+      .featured-card video{
+        min-height:240px;
+      }
+
+      .work-slider{
+        grid-auto-columns:84%;
+      }
+
+      .work-card img,
+      .work-card{
         height:290px;
         min-height:290px;
       }
-      .form-grid{grid-template-columns:1fr}
+
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
       .gallery-head{
         align-items:flex-start;
         flex-direction:column;
       }
-      .brand-text strong{font-size:20px}
-      .brand-text small{font-size:9px}
-      .brand-logo{width:58px;height:58px}
+
+      .brand-text strong{
+        font-size:20px;
+      }
+
+      .brand-text small{
+        font-size:9px;
+      }
+
+      .brand-logo{
+        width:58px;
+        height:58px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header class="header">
@@ -990,6 +1119,7 @@
         <div class="brand-logo">
           <img src="assets/logo.jpg" alt="Logo Serralheria Verdun">
         </div>
+
         <div class="brand-text">
           <strong>Serralheria Verdun</strong>
           <small>Marcos Verdun</small>
@@ -1017,6 +1147,7 @@
   </header>
 
   <main id="inicio">
+
     <section class="hero">
       <div class="hero-video">
         <video autoplay muted loop playsinline>
@@ -1097,16 +1228,85 @@
         </div>
 
         <div class="work-slider" id="workSlider">
-          <article class="work-card"><img src="assets/foto-1.jpg" alt="Trabalho 1"><div class="work-caption"><strong>Churrasqueira</strong><span>Produção e acabamento com qualidade.</span></div></article>
-          <article class="work-card"><img src="assets/foto-2.jpg" alt="Trabalho 2"><div class="work-caption"><strong>Antes e depois</strong><span>Transformação e melhoria visual.</span></div></article>
-          <article class="work-card"><img src="assets/foto-3.jpg" alt="Trabalho 3"><div class="work-caption"><strong>Portões</strong><span>Estrutura resistente e bom acabamento.</span></div></article>
-          <article class="work-card"><img src="assets/foto-4.jpg" alt="Trabalho 4"><div class="work-caption"><strong>Grades</strong><span>Solução sob medida para segurança.</span></div></article>
-          <article class="work-card"><img src="assets/foto-5.jpg" alt="Trabalho 5"><div class="work-caption"><strong>Serralheria</strong><span>Serviços variados em metal.</span></div></article>
-          <article class="work-card"><img src="assets/foto-6.jpg" alt="Trabalho 6"><div class="work-caption"><strong>Soldas</strong><span>Precisão e atenção aos detalhes.</span></div></article>
-          <article class="work-card"><img src="assets/foto-7.jpg" alt="Trabalho 7"><div class="work-caption"><strong>Estruturas</strong><span>Projetos personalizados.</span></div></article>
-          <article class="work-card"><img src="assets/foto-8.jpg" alt="Trabalho 8"><div class="work-caption"><strong>Acabamento</strong><span>Capricho em cada etapa do serviço.</span></div></article>
-          <article class="work-card"><img src="assets/foto-9.jpg" alt="Trabalho 9"><div class="work-caption"><strong>Reformas</strong><span>Melhoria e recuperação de peças.</span></div></article>
-          <article class="work-card"><img src="assets/foto-10.jpg" alt="Trabalho 10"><div class="work-caption"><strong>Verdun</strong><span>Qualidade, experiência e confiança.</span></div></article>
+          <article class="work-card">
+            <img src="assets/foto-1.webp" alt="Trabalho 1">
+            <div class="work-caption">
+              <strong>Churrasqueira</strong>
+              <span>Produção e acabamento com qualidade.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-2.webp" alt="Trabalho 2">
+            <div class="work-caption">
+              <strong>Antes e depois</strong>
+              <span>Transformação e melhoria visual.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-3.webp" alt="Trabalho 3">
+            <div class="work-caption">
+              <strong>Portões</strong>
+              <span>Estrutura resistente e bom acabamento.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-4.webp" alt="Trabalho 4">
+            <div class="work-caption">
+              <strong>Grades</strong>
+              <span>Solução sob medida para segurança.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-5.webp" alt="Trabalho 5">
+            <div class="work-caption">
+              <strong>Serralheria</strong>
+              <span>Serviços variados em metal.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-6.webp" alt="Trabalho 6">
+            <div class="work-caption">
+              <strong>Soldas</strong>
+              <span>Precisão e atenção aos detalhes.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-7.webp" alt="Trabalho 7">
+            <div class="work-caption">
+              <strong>Estruturas</strong>
+              <span>Projetos personalizados.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-8.webp" alt="Trabalho 8">
+            <div class="work-caption">
+              <strong>Acabamento</strong>
+              <span>Capricho em cada etapa do serviço.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-9.webp" alt="Trabalho 9">
+            <div class="work-caption">
+              <strong>Reformas</strong>
+              <span>Melhoria e recuperação de peças.</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img src="assets/foto-10.webp" alt="Trabalho 10">
+            <div class="work-caption">
+              <strong>Verdun</strong>
+              <span>Qualidade, experiência e confiança.</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
