@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serralheria Verdun | Serralheria, Churrasqueiras e Soldas</title>
+  <meta name="description" content="Serralheria Verdun - orçamento pelo WhatsApp, serralheria em geral, churrasqueiras, portões, grades, estruturas metálicas e muito mais." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold:#d4a646;
+      --gold-2:#f1cf7b;
+      --gold-3:#9b6b17;
+      --black:#050505;
+      --black-2:#0d0d0f;
+      --black-3:#141416;
+      --white:#ffffff;
+      --text:#efefef;
+      --muted:#b8b8b8;
+      --line:rgba(212,166,70,.18);
+      --panel:rgba(255,255,255,.06);
+      --panel-2:rgba(255,255,255,.08);
+      --shadow:0 24px 60px rgba(0,0,0,.38);
+      --shadow-2:0 14px 28px rgba(0,0,0,.28);
+      --wa:#25d366;
+      --wa-2:#168c3f;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Inter",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(212,166,70,.14), transparent 25%),
+        radial-gradient(circle at 90% 10%, rgba(212,166,70,.08), transparent 28%),
+        linear-gradient(180deg,#040404 0%, #0b0b0d 42%, #030303 100%);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    button,input,textarea,select{font-family:inherit}
+
+    .container{width:min(1180px,calc(100% - 24px));margin:0 auto}
+    .section{padding:82px 0}
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(212,166,70,.10);
+      border:1px solid rgba(212,166,70,.18);
+      color:#f5dca4;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .tag::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 0 6px rgba(212,166,70,.14);
+    }
+
+    .section-top{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:12px;
+      margin-bottom:30px;
+    }
+
+    .section-title{
+      font-family:"Oswald",sans-serif;
+      font-size:clamp(34px,5vw,62px);
+      line-height:.96;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      color:#fff;
+    }
+
+    .gradient{
+      background:linear-gradient(135deg,var(--gold-2),var(--gold),var(--gold-3));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .section-sub{
+      max-width:850px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.8;
+    }
+
+    .btn{
+      position:relative;
+      overflow:hidden;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:54px;
+      padding:14px 24px;
+      border:none;
+      border-radius:14px;
+      cursor:pointer;
+      font-family:"Oswald",sans-serif;
+      font-size:16px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      transition:.25s ease;
+      white-space:nowrap;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg,transparent,rgba(255,255,255,.22),transparent);
+      transform:translateX(-130%);
+      transition:.75s ease;
+    }
+
+    .btn:hover::before{transform:translateX(130%)}
+
+    .btn-gold{
+      background:linear-gradient(135deg,var(--gold-3),var(--gold),var(--gold-2));
+      color:#111;
+      box-shadow:0 14px 32px rgba(212,166,70,.20);
+    }
+
+    .btn-dark{
+      background:linear-gradient(135deg,#0c0c0e,#1a1a1d);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow-2);
+    }
+
+    .btn-outline{
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(10px);
+    }
+
+    .btn-wa{
+      background:linear-gradient(135deg,var(--wa),var(--wa-2));
+      color:#fff;
+      box-shadow:0 14px 30px rgba(37,211,102,.24);
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(5,5,5,.84);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 10px 22px rgba(0,0,0,.22);
+    }
+
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-logo{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      overflow:hidden;
+      background:#000;
+      border:1px solid rgba(212,166,70,.22);
+      box-shadow:0 0 0 5px rgba(212,166,70,.08),0 14px 28px rgba(0,0,0,.24);
+      animation:floatLogo 3.6s ease-in-out infinite;
+    }
+
+    .brand-logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .brand-text{
+      display:grid;
+      gap:3px;
+      line-height:1;
+    }
+
+    .brand-text strong{
+      font-family:"Oswald",sans-serif;
+      font-size:24px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      color:#fff;
+    }
+
+    .brand-text small{
+      font-size:10px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#c2a56b;
+      font-weight:800;
+    }
+
+    .menu-wrap{display:flex;align-items:center;gap:14px}
+    .menu{display:flex;align-items:center;gap:18px}
+
+    .menu a{
+      font-family:"Oswald",sans-serif;
+      font-size:16px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      color:#ebebeb;
+      transition:.2s;
+    }
+
+    .menu a:hover{color:var(--gold-2)}
+    .header-cta{display:flex;align-items:center;gap:10px}
+
+    .mobile-toggle{
+      display:none;
+      width:46px;
+      height:46px;
+      border:none;
+      border-radius:12px;
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .hero{
+      position:relative;
+      min-height:94vh;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      background:#000;
+    }
+
+    .hero-video{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      overflow:hidden;
+    }
+
+    .hero-video video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(.40) saturate(1.02);
+    }
+
+    .hero-video::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.62), rgba(0,0,0,.80)),
+        linear-gradient(180deg, rgba(0,0,0,.14), rgba(0,0,0,.88));
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size:42px 42px;
+      opacity:.20;
+      z-index:1;
+      pointer-events:none;
+    }
+
+    .hero-layout{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:36px;
+      align-items:center;
+      padding:120px 0 96px;
+    }
+
+    .hero-copy{
+      display:grid;
+      gap:18px;
+      max-width:780px;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      justify-self:start;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(12px);
+      border-radius:999px;
+      padding:11px 16px;
+      color:#fff;
+      font-weight:900;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+    }
+
+    .hero-badge::before{
+      content:"";
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 0 6px rgba(212,166,70,.12);
+    }
+
+    .hero-title{
+      font-family:"Oswald",sans-serif;
+      font-size:clamp(48px,8vw,106px);
+      line-height:.88;
+      letter-spacing:.03em;
+      text-transform:uppercase;
+      color:#fff;
+      text-shadow:0 14px 40px rgba(0,0,0,.28);
+    }
+
+    .hero-title .line-2{
+      display:block;
+      background:linear-gradient(135deg,#fff,#f6deb0,#d4a646);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero-sub{
+      max-width:720px;
+      font-size:clamp(18px,2vw,23px);
+      line-height:1.6;
+      color:#e8e8e8;
+    }
+
+    .hero-sub span{
+      color:#f1cf7b;
+      font-weight:800;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:6px;
+    }
+
+    .hero-info{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      color:#dddddd;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.10em;
+      font-weight:800;
+      margin-top:6px;
+    }
+
+    .hero-info b{color:#fff}
+
+    .hero-card{
+      justify-self:end;
+      width:min(390px,100%);
+      padding:24px;
+      border-radius:28px;
+      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(16px);
+      box-shadow:var(--shadow);
+      display:grid;
+      gap:16px;
+      animation:floatCard 5.5s ease-in-out infinite;
+    }
+
+    .hero-card h3{
+      font-family:"Oswald",sans-serif;
+      font-size:30px;
+      text-transform:uppercase;
+      line-height:1;
+      color:#fff;
+      text-align:center;
+    }
+
+    .hero-card p{
+      text-align:center;
+      color:#dfdfdf;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .phone-pill{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:16px;
+      background:rgba(212,166,70,.18);
+      border:1px solid rgba(212,166,70,.22);
+      font-weight:900;
+      color:#fff;
+    }
+
+    .featured-video{
+      background:linear-gradient(180deg,#090909 0%,#111113 100%);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .featured-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:center;
+    }
+
+    .featured-copy{
+      display:grid;
+      gap:14px;
+    }
+
+    .featured-copy h2{
+      font-family:"Oswald",sans-serif;
+      font-size:clamp(34px,5vw,58px);
+      line-height:.95;
+      text-transform:uppercase;
+      color:#fff;
+    }
+
+    .featured-copy p{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.8;
+    }
+
+    .featured-card{
+      overflow:hidden;
+      border-radius:24px;
+      border:1px solid rgba(212,166,70,.14);
+      background:#000;
+      box-shadow:var(--shadow);
+    }
+
+    .featured-card video{
+      width:100%;
+      height:100%;
+      min-height:360px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .slider-section{
+      background:linear-gradient(180deg,#090909 0%,#050505 100%);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .gallery-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:20px;
+    }
+
+    .gallery-text{
+      display:grid;
+      gap:10px;
+    }
+
+    .gallery-text h2{
+      font-family:"Oswald",sans-serif;
+      text-transform:uppercase;
+      font-size:clamp(32px,5vw,56px);
+      line-height:.95;
+      color:#fff;
+    }
+
+    .gallery-text p{
+      max-width:760px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .slider-controls{
+      display:flex;
+      gap:10px;
+      flex-shrink:0;
+    }
+
+    .slider-btn{
+      width:46px;
+      height:46px;
+      border:none;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      font-size:24px;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow-2);
+      transition:.2s;
+    }
+
+    .slider-btn:hover{
+      transform:translateY(-2px);
+      background:rgba(212,166,70,.18);
+    }
+
+    .work-slider{
+      display:grid;
+      grid-auto-flow:column;
+      grid-auto-columns:calc((100% - 42px)/4);
+      gap:14px;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      scrollbar-width:none;
+      -ms-overflow-style:none;
+      padding:4px 2px 12px;
+    }
+
+    .work-slider::-webkit-scrollbar{display:none}
+
+    .work-card{
+      position:relative;
+      overflow:hidden;
+      min-height:320px;
+      border-radius:24px;
+      background:#111;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow-2);
+    }
+
+    .work-card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+
+    .work-card:hover img{transform:scale(1.05)}
+
+    .work-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.82), rgba(0,0,0,.04) 56%);
+      pointer-events:none;
+    }
+
+    .work-caption{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      z-index:2;
+      display:grid;
+      gap:4px;
+      color:#fff;
+    }
+
+    .work-caption strong{
+      font-family:"Oswald",sans-serif;
+      font-size:20px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      line-height:1;
+    }
+
+    .work-caption span{
+      font-size:12px;
+      color:#efefef;
+      font-weight:700;
+      line-height:1.45;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow-2);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 20% 0%, rgba(212,166,70,.12), transparent 34%);
+      pointer-events:none;
+    }
+
+    .icon{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--gold-3),var(--gold),var(--gold-2));
+      color:#111;
+      font-size:24px;
+      font-weight:900;
+      margin-bottom:14px;
+      box-shadow:0 12px 24px rgba(212,166,70,.18);
+    }
+
+    .card h3{
+      font-family:"Oswald",sans-serif;
+      font-size:28px;
+      text-transform:uppercase;
+      line-height:1;
+      margin-bottom:12px;
+      color:#fff;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+      margin-bottom:16px;
+    }
+
+    .list{
+      display:grid;
+      gap:10px;
+      list-style:none;
+      margin-top:12px;
+      margin-bottom:18px;
+    }
+
+    .list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:#f0f0f0;
+      font-size:14px;
+      line-height:1.6;
+      font-weight:700;
+    }
+
+    .list li::before{
+      content:"✦";
+      color:var(--gold);
+      font-weight:900;
+      margin-top:1px;
+    }
+
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:.75fr 1.25fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .rating-card,
+    .reviews-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow-2);
+    }
+
+    .rating-big{
+      display:grid;
+      gap:8px;
+      justify-items:center;
+      text-align:center;
+      margin-top:10px;
+    }
+
+    .rating-big strong{
+      font-size:72px;
+      line-height:1;
+      color:#fff;
+      font-family:"Oswald",sans-serif;
+    }
+
+    .stars{
+      color:var(--gold-2);
+      font-size:22px;
+      letter-spacing:.10em;
+    }
+
+    .rating-big span{
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .review-item{
+      padding:18px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .review-item:last-child{border-bottom:none}
+
+    .review-item h4{
+      color:#fff;
+      font-size:18px;
+      margin-bottom:6px;
+    }
+
+    .review-item .mini-stars{
+      color:var(--gold-2);
+      font-size:15px;
+      margin-bottom:8px;
+    }
+
+    .review-item p{
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .map-card,.form-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .map-info,.form-box{padding:24px}
+
+    .map-info h3,.form-box h3{
+      font-family:"Oswald",sans-serif;
+      font-size:34px;
+      text-transform:uppercase;
+      line-height:1;
+      margin:12px 0;
+      color:#fff;
+    }
+
+    .map-info p,.form-box p{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .map-frame{
+      width:100%;
+      height:380px;
+      border:0;
+      filter:grayscale(.3) contrast(1.05);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .full{grid-column:1/-1}
+
+    input,select,textarea{
+      width:100%;
+      min-height:52px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      padding:0 16px;
+      font-size:14px;
+      outline:none;
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+      padding:14px 16px;
+    }
+
+    input::placeholder, textarea::placeholder{color:#bdbdbd}
+    select{color:#d8d8d8}
+
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(212,166,70,.45);
+      box-shadow:0 0 0 4px rgba(212,166,70,.10);
+    }
+
+    .footer{
+      padding:44px 0 90px;
+      background:#050505;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr .9fr;
+      gap:22px;
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-box h4{
+      font-family:"Oswald",sans-serif;
+      text-transform:uppercase;
+      font-size:22px;
+      margin-bottom:10px;
+      color:#fff;
+    }
+
+    .footer-box p,.footer-box li,.footer-box a{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .footer-box ul{
+      list-style:none;
+      display:grid;
+      gap:6px;
+    }
+
+    .footer-bottom{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:1200;
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--wa),var(--wa-2));
+      color:#fff;
+      box-shadow:0 18px 40px rgba(37,211,102,.35);
+      animation:floatLogo 2.8s ease-in-out infinite;
+    }
+
+    .wa-float svg{width:32px;height:32px}
+
+    @keyframes floatLogo{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-5px)}
+    }
+
+    @keyframes floatCard{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-12px)}
+    }
+
+    @media(max-width:1050px){
+      .menu{
+        position:absolute;
+        top:82px;
+        left:12px;
+        right:12px;
+        background:#0b0b0d;
+        border:1px solid rgba(255,255,255,.10);
+        border-radius:18px;
+        box-shadow:var(--shadow);
+        padding:16px;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .menu.open{display:flex}
+      .mobile-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .header-cta{display:none}
+      .hero-layout,.featured-wrap,.grid-3,.grid-2,.reviews-grid,.contact-grid,.footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-layout{
+        text-align:center;
+      }
+
+      .hero-copy{
+        justify-items:center;
+        margin:0 auto;
+      }
+
+      .hero-badge{justify-self:center}
+      .hero-actions,.hero-info{justify-content:center}
+      .hero-card{justify-self:center}
+      .work-slider{grid-auto-columns:calc((100% - 14px)/2)}
+      .map-frame{height:320px}
+    }
+
+    @media(max-width:760px){
+      .section{padding:60px 0}
+      .hero{min-height:auto}
+      .hero-layout{padding:110px 0 82px}
+      .hero-title{font-size:44px}
+      .hero-sub{font-size:18px}
+      .hero-actions .btn{width:100%}
+      .hero-card{display:none}
+      .featured-card video{min-height:240px}
+      .work-slider{grid-auto-columns:84%}
+      .work-card img,.work-card{
+        height:290px;
+        min-height:290px;
+      }
+      .form-grid{grid-template-columns:1fr}
+      .gallery-head{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      .brand-text strong{font-size:20px}
+      .brand-text small{font-size:9px}
+      .brand-logo{width:58px;height:58px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <div class="brand-logo">
+          <img src="assets/logo.jpg" alt="Logo Serralheria Verdun">
+        </div>
+        <div class="brand-text">
+          <strong>Serralheria Verdun</strong>
+          <small>Marcos Verdun</small>
+        </div>
+      </a>
+
+      <div class="menu-wrap">
+        <nav class="menu" id="menu">
+          <a href="#inicio">Início</a>
+          <a href="#destaque">Destaque</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-cta">
+          <button class="btn btn-gold" onclick="abrirWhatsApp('Topo orçamento','Olá, quero solicitar um orçamento.')">Orçamento</button>
+          <button class="btn btn-wa" onclick="abrirWhatsApp('Topo WhatsApp','Olá, quero falar com a Serralheria Verdun.')">WhatsApp</button>
+        </div>
+
+        <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-video">
+        <video autoplay muted loop playsinline>
+          <source src="assets/hero.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="hero-badge">Orçamento pelo nosso WhatsApp</div>
+
+          <h1 class="hero-title">
+            Serralheria
+            <span class="line-2">Verdun</span>
+          </h1>
+
+          <p class="hero-sub">
+            Trabalhamos com <span>serralheria em geral, churrasqueiras, portões, grades, soldas e estruturas metálicas</span>, sempre buscando qualidade no acabamento e ótimo atendimento.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-gold" onclick="abrirWhatsApp('Hero orçamento','Olá, quero solicitar um orçamento com a Serralheria Verdun.')">Solicitar orçamento</button>
+            <a class="btn btn-outline" href="#galeria">Ver trabalhos</a>
+            <button class="btn btn-wa" onclick="abrirWhatsApp('Hero WhatsApp','Olá, quero atendimento pelo WhatsApp.')">Chamar no WhatsApp</button>
+          </div>
+
+          <div class="hero-info">
+            <span><b>Marcos Verdun</b></span>
+            <span>•</span>
+            <span>WhatsApp: (11) 96734-6852</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Será um prazer te atender</h3>
+          <p>
+            Atendimento direto no WhatsApp para orçamentos e informações. Fale com a equipe e envie a foto do serviço que você precisa.
+          </p>
+          <div class="phone-pill">☎ (11) 96734-6852</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section featured-video" id="destaque">
+      <div class="container featured-wrap">
+        <div class="featured-copy">
+          <span class="tag">Vídeo em destaque</span>
+          <h2>Veja a <span class="gradient">qualidade</span> do trabalho</h2>
+          <p>
+            Aqui você pode destacar um segundo vídeo mostrando o serviço realizado, antes e depois, fabricação de peças ou acabamento final da serralheria.
+          </p>
+          <button class="btn btn-gold" onclick="abrirWhatsApp('Vídeo em destaque','Olá, vi o vídeo em destaque e quero solicitar um orçamento.')">Pedir orçamento</button>
+        </div>
+
+        <div class="featured-card">
+          <video controls playsinline>
+            <source src="assets/destaque.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section slider-section" id="galeria">
+      <div class="container">
+        <div class="gallery-head">
+          <div class="gallery-text">
+            <span class="tag">Galeria</span>
+            <h2>Nossos <span class="gradient">trabalhos</span></h2>
+            <p>
+              Use 10 imagens para mostrar serviços realizados, churrasqueiras, antes e depois, portões, grades, estruturas e outros trabalhos da Serralheria Verdun.
+            </p>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="moveSlider(-1)">‹</button>
+            <button class="slider-btn" onclick="moveSlider(1)">›</button>
+          </div>
+        </div>
+
+        <div class="work-slider" id="workSlider">
+          <article class="work-card"><img src="assets/foto-1.jpg" alt="Trabalho 1"><div class="work-caption"><strong>Churrasqueira</strong><span>Produção e acabamento com qualidade.</span></div></article>
+          <article class="work-card"><img src="assets/foto-2.jpg" alt="Trabalho 2"><div class="work-caption"><strong>Antes e depois</strong><span>Transformação e melhoria visual.</span></div></article>
+          <article class="work-card"><img src="assets/foto-3.jpg" alt="Trabalho 3"><div class="work-caption"><strong>Portões</strong><span>Estrutura resistente e bom acabamento.</span></div></article>
+          <article class="work-card"><img src="assets/foto-4.jpg" alt="Trabalho 4"><div class="work-caption"><strong>Grades</strong><span>Solução sob medida para segurança.</span></div></article>
+          <article class="work-card"><img src="assets/foto-5.jpg" alt="Trabalho 5"><div class="work-caption"><strong>Serralheria</strong><span>Serviços variados em metal.</span></div></article>
+          <article class="work-card"><img src="assets/foto-6.jpg" alt="Trabalho 6"><div class="work-caption"><strong>Soldas</strong><span>Precisão e atenção aos detalhes.</span></div></article>
+          <article class="work-card"><img src="assets/foto-7.jpg" alt="Trabalho 7"><div class="work-caption"><strong>Estruturas</strong><span>Projetos personalizados.</span></div></article>
+          <article class="work-card"><img src="assets/foto-8.jpg" alt="Trabalho 8"><div class="work-caption"><strong>Acabamento</strong><span>Capricho em cada etapa do serviço.</span></div></article>
+          <article class="work-card"><img src="assets/foto-9.jpg" alt="Trabalho 9"><div class="work-caption"><strong>Reformas</strong><span>Melhoria e recuperação de peças.</span></div></article>
+          <article class="work-card"><img src="assets/foto-10.jpg" alt="Trabalho 10"><div class="work-caption"><strong>Verdun</strong><span>Qualidade, experiência e confiança.</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-top">
+          <span class="tag">Serviços</span>
+          <h2 class="section-title">O que a <span class="gradient">Verdun</span> faz</h2>
+          <p class="section-sub">
+            Trabalhos de serralheria em geral, com foco em funcionalidade, acabamento e atendimento direto no WhatsApp.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">🔥</div>
+            <h3>Churrasqueiras</h3>
+            <p>
+              Fabricação e ajustes em churrasqueiras, com estrutura resistente e acabamento sob medida.
+            </p>
+            <button class="btn btn-dark" onclick="abrirWhatsApp('Serviço - Churrasqueiras','Olá, tenho interesse em churrasqueira.')">Quero esse serviço</button>
+          </div>
+
+          <div class="card">
+            <div class="icon">⚒️</div>
+            <h3>Serralheria em geral</h3>
+            <p>
+              Soluções em metal para diferentes necessidades, como reparos, fabricação e adaptações.
+            </p>
+            <button class="btn btn-dark" onclick="abrirWhatsApp('Serviço - Serralheria em geral','Olá, tenho interesse em serralheria em geral.')">Quero esse serviço</button>
+          </div>
+
+          <div class="card">
+            <div class="icon">🚪</div>
+            <h3>Portões & Grades</h3>
+            <p>
+              Serviços para portões, grades e estruturas metálicas com foco em resistência e bom visual.
+            </p>
+            <button class="btn btn-dark" onclick="abrirWhatsApp('Serviço - Portões e grades','Olá, tenho interesse em portões ou grades.')">Quero esse serviço</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="avaliacoes">
+      <div class="container reviews-grid">
+        <div class="rating-card">
+          <span class="tag">Avaliações</span>
+
+          <div class="rating-big">
+            <strong>5,0</strong>
+            <div class="stars">★★★★★</div>
+            <span>Baseado em 3 avaliações</span>
+          </div>
+        </div>
+
+        <div class="reviews-card">
+          <span class="tag">O que dizem</span>
+
+          <div class="review-item">
+            <h4>Taty Thatyisis</h4>
+            <div class="mini-stars">★★★★★</div>
+            <p>Ótimo trabalho, estão de parabéns!</p>
+          </div>
+
+          <div class="review-item">
+            <h4>Carlos Eduardo Grigório</h4>
+            <div class="mini-stars">★★★★★</div>
+            <p>Melhor serralheiro, super recomendo.</p>
+          </div>
+
+          <div class="review-item">
+            <h4>Maria Aparecida de Araujo Souza</h4>
+            <div class="mini-stars">★★★★★</div>
+            <p>Atendimento elogiado e trabalho muito bem recomendado pelos clientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact-grid">
+        <div class="map-card">
+          <div class="map-info">
+            <span class="tag">Contato</span>
+            <h3>Fale com a <span class="gradient">Serralheria Verdun</span></h3>
+            <p>
+              Marcos Verdun<br>
+              WhatsApp: (11) 96734-6852
+            </p>
+            <p style="margin-top:12px;">
+              Orçamento pelo nosso WhatsApp.<br>
+              Será um prazer te atender 😊
+            </p>
+          </div>
+
+          <iframe
+            class="map-frame"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=São%20Paulo%20SP&output=embed">
+          </iframe>
+        </div>
+
+        <div class="form-card">
+          <div class="form-box">
+            <span class="tag">Orçamento rápido</span>
+            <h3>Peça seu <span class="gradient">orçamento</span></h3>
+            <p>
+              Preencha os dados e o WhatsApp abrirá com uma mensagem pronta para facilitar seu atendimento.
+            </p>
+
+            <form class="form-grid" onsubmit="enviarFormulario(event)">
+              <input type="text" name="nome" placeholder="Seu nome" required>
+              <input type="tel" name="telefone" placeholder="Seu WhatsApp" required>
+
+              <select name="servico" required>
+                <option value="">Tipo de serviço</option>
+                <option>Churrasqueira</option>
+                <option>Serralheria em geral</option>
+                <option>Portão</option>
+                <option>Grade</option>
+                <option>Estrutura metálica</option>
+                <option>Solda</option>
+                <option>Outro serviço</option>
+              </select>
+
+              <input type="text" name="cidade" placeholder="Cidade / Bairro">
+
+              <textarea class="full" name="mensagem" placeholder="Descreva o que você precisa..."></textarea>
+
+              <button class="btn btn-wa full" type="submit">Enviar para WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-box">
+            <h4>Serralheria Verdun</h4>
+            <p>
+              Serviços de serralheria, churrasqueiras, portões, grades, soldas e estruturas metálicas com atendimento direto pelo WhatsApp.
+            </p>
+          </div>
+
+          <div class="footer-box">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#destaque">Destaque</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#avaliacoes">Avaliações</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-box">
+            <h4>Contato</h4>
+            <ul>
+              <li>WhatsApp: (11) 96734-6852</li>
+              <li>Marcos Verdun</li>
+              <li>Orçamento pelo WhatsApp</li>
+              <li>Nota 5,0 com 3 avaliações</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Serralheria Verdun - Todos os direitos reservados</p>
+          <p>Site criado para apresentação e captação de clientes</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <a class="wa-float" href="#" onclick="abrirWhatsApp('Botão flutuante','Olá, quero solicitar um orçamento com a Serralheria Verdun.')" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16.02 3.2A12.68 12.68 0 0 0 5.09 22.3L3.2 28.8l6.68-1.76a12.62 12.62 0 0 0 6.12 1.56h.01A12.7 12.7 0 0 0 16.02 3.2Zm7.47 17.94c-.31.88-1.56 1.62-2.22 1.73-.57.09-1.3.13-2.1-.13-.48-.15-1.1-.35-1.89-.69-3.33-1.44-5.5-4.8-5.67-5.02-.17-.22-1.35-1.8-1.35-3.43 0-1.63.86-2.44 1.16-2.77.3-.33.66-.41.88-.41h.63c.2.01.48-.08.75.57.29.7.98 2.4 1.07 2.57.09.17.15.37.03.59-.11.22-.17.36-.34.56-.17.2-.36.45-.51.61-.17.17-.35.36-.15.71.2.35.88 1.45 1.89 2.35 1.3 1.16 2.39 1.52 2.74 1.69.35.17.55.14.75-.09.2-.23.86-1 1.09-1.35.23-.35.46-.29.78-.17.32.12 2.03.96 2.38 1.13.35.17.58.26.67.4.09.14.09.81-.22 1.69Z"/>
+    </svg>
+  </a>
+
+  <script>
+    const WHATSAPP = "5511967346852";
+
+    function toggleMenu(){
+      document.getElementById("menu").classList.toggle("open");
+    }
+
+    document.querySelectorAll(".menu a").forEach(link=>{
+      link.addEventListener("click",()=>{
+        document.getElementById("menu").classList.remove("open");
+      });
+    });
+
+    function abrirWhatsApp(botao, interesse){
+      const texto =
+`Olá, vim pelo site da Serralheria Verdun.
+
+Botão clicado: ${botao}
+Interesse: ${interesse}`;
+
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, "_blank");
+    }
+
+    function enviarFormulario(event){
+      event.preventDefault();
+
+      const form = event.target;
+      const nome = form.nome.value.trim();
+      const telefone = form.telefone.value.trim();
+      const servico = form.servico.value.trim();
+      const cidade = form.cidade.value.trim();
+      const mensagem = form.mensagem.value.trim();
+
+      const texto =
+`Olá, vim pelo site da Serralheria Verdun e quero um orçamento.
+
+Nome: ${nome}
+WhatsApp: ${telefone}
+Serviço: ${servico}
+Cidade/Bairro: ${cidade}
+Mensagem: ${mensagem}`;
+
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, "_blank");
+    }
+
+    const slider = document.getElementById("workSlider");
+    let autoSlide;
+
+    function moveSlider(direction){
+      const amount = Math.min(slider.clientWidth * 0.85, 420);
+      slider.scrollBy({ left: amount * direction, behavior: "smooth" });
+    }
+
+    function startAutoSlide(){
+      stopAutoSlide();
+
+      autoSlide = setInterval(()=>{
+        slider.scrollLeft += 1.9;
+
+        if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 3){
+          slider.scrollLeft = 0;
+        }
+      }, 16);
+    }
+
+    function stopAutoSlide(){
+      clearInterval(autoSlide);
+    }
+
+    startAutoSlide();
+
+    slider.addEventListener("mouseenter", stopAutoSlide);
+    slider.addEventListener("mouseleave", startAutoSlide);
+    slider.addEventListener("touchstart", stopAutoSlide, { passive:true });
+    slider.addEventListener("touchend", startAutoSlide);
+  </script>
+</body>
+</html>
